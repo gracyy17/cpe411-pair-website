@@ -8,6 +8,8 @@
 	if (slides.length === 0 || dots.length === 0 || !nextButton || !prevButton) return;
 
 	let index = 0;
+	let autoTimerId = null;
+	const autoMs = 4500;
 
 	const setActive = (nextIndex) => {
 		index = (nextIndex + slides.length) % slides.length;
@@ -22,15 +24,50 @@
 		});
 	};
 
-	nextButton.addEventListener('click', () => setActive(index + 1));
-	prevButton.addEventListener('click', () => setActive(index - 1));
+	const startAuto = () => {
+		if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+		stopAuto();
+		autoTimerId = window.setInterval(() => setActive(index + 1), autoMs);
+	};
+
+	const stopAuto = () => {
+		if (autoTimerId !== null) {
+			window.clearInterval(autoTimerId);
+			autoTimerId = null;
+		}
+	};
+
+	const restartAuto = () => {
+		startAuto();
+	};
+
+	nextButton.addEventListener('click', () => {
+		setActive(index + 1);
+		restartAuto();
+	});
+	prevButton.addEventListener('click', () => {
+		setActive(index - 1);
+		restartAuto();
+	});
 
 	dots.forEach((dot) => {
 		dot.addEventListener('click', () => {
 			const value = Number(dot.getAttribute('data-index'));
 			if (Number.isFinite(value)) setActive(value);
+			restartAuto();
 		});
 	});
+
+	// Auto-advance slides
+	startAuto();
+
+	// Pause when hovering/focusing the card, resume on leave/blur.
+	if (card) {
+		card.addEventListener('mouseenter', stopAuto);
+		card.addEventListener('mouseleave', startAuto);
+		card.addEventListener('focusin', stopAuto);
+		card.addEventListener('focusout', startAuto);
+	}
 
 	if (card) {
 		card.addEventListener('click', (event) => {

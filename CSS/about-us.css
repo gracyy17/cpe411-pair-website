@@ -281,3 +281,101 @@ a {
 		grid-template-columns: 1fr;
 	}
 }
+
+/* Homepage (slideshow) */
+.header-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 64px;
+}
+
+.header-inner .brand {
+	display: grid;
+	gap: 0.1rem;
+}
+
+.site-title {
+	font-weight: 900;
+	letter-spacing: 0.2px;
+}
+
+.site-tagline {
+	color: var(--muted);
+	font-weight: 600;
+	font-size: 0.95rem;
+}
+
+.slideshow-wrapper {
+	display: grid;
+}
+
+.slideshow-card {
+	border-radius: 18px;
+	background: linear-gradient(180deg, rgba(17, 26, 46, 0.9), rgba(17, 26, 46, 0.6));
+	border: 1px solid var(--border);
+	overflow: hidden;
+	position: relative;
+}
+
+.slides {
+	display: grid;
+}
+
+.slide {
+	display: none;
+}
+
+.slide.active {
+	display: block;
+}
+
+.controls {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 0.75rem;
+	transform: translateY(-50%);
+	pointer-events: none;
+}
+
+.btn {
+	pointer-events: auto;
+	width: 44px;
+	height: 44px;
+	border-radius: 14px;
+	border: 1px solid rgba(232, 238, 252, 0.18);
+	background: rgba(15, 23, 48, 0.65);
+	color: var(--text);
+	font-size: 1.75rem;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background: rgba(122, 162, 255, 0.12);
+	border-color: rgba(122, 162, 255, 0.35);
+}
+
+.dots {
+	display: flex;
+	gap: 0.5rem;
+	padding: 0.85rem 1.25rem 1.25rem;
+}
+
+.dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 999px;
+	border: 1px solid rgba(232, 238, 252, 0.22);
+	background: rgba(232, 238, 252, 0.12);
+	cursor: pointer;
+}
+
+.dot.active {
+	background: rgba(122, 162, 255, 0.9);
+	border-color: rgba(122, 162, 255, 0.35);
+}

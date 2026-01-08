@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Projects</title>
+		<link rel="stylesheet" href="../CSS/about-us.css" />
+		<link rel="stylesheet" href="../CSS/project.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container">
+				<a class="brand" href="../index.html" aria-label="Homepage">
+					<span class="brand__mark" aria-hidden="true">CPE</span>
+					<span class="brand__text">Projects</span>
+				</a>
+				<nav class="site-nav" aria-label="Primary">
+					<a class="site-nav__link" href="../index.html">Home</a>
+					<a class="site-nav__link" href="./project.html" aria-current="page">Projects</a>
+					<a class="site-nav__link" href="./about-us.html">About</a>
+				</nav>
+			</div>
+		</header>
+
+		<main id="top">
+			<section class="project-hero" aria-labelledby="projects-title">
+				<div class="container">
+					<div class="project-hero__inner">
+						<p class="project-hero__kicker">CPE 411 • Portfolio</p>
+						<h1 id="projects-title" class="project-hero__title">Projects & Deliverables</h1>
+						<p class="project-hero__lede">
+							This page documents what we built, why we built it, and what each part contains.
+							Use it as a checklist when you finalize outputs.
+						</p>
+
+						<nav class="project-nav" aria-label="Project sections">
+							<a class="project-nav__link" href="#pair-website">Website Build</a>
+							<a class="project-nav__link" href="#about-page">Team Profile</a>
+							<a class="project-nav__link" href="#next-project">Upcoming Work</a>
+						</nav>
+
+						<dl class="project-metrics" aria-label="Project metrics">
+							<div class="metric">
+								<dt class="metric__label">Team</dt>
+								<dd class="metric__value">3 members</dd>
+							</div>
+							<div class="metric">
+								<dt class="metric__label">Scope</dt>
+								<dd class="metric__value">Front-end</dd>
+							</div>
+							<div class="metric">
+								<dt class="metric__label">Year</dt>
+								<dd class="metric__value">2026</dd>
+							</div>
+						</dl>
+
+						<div class="summary-grid" aria-label="Team and projects overview">
+							<section class="summary-card" aria-labelledby="team-title">
+								<h2 id="team-title" class="summary-card__title">Team</h2>
+								<p class="summary-card__text">Kenneth, John Joseph, Hellene</p>
+							</section>
+
+							<section class="summary-card" aria-labelledby="list-title">
+								<h2 id="list-title" class="summary-card__title">Projects</h2>
+								<ul class="summary-list" aria-label="Project list">
+									<li><a class="summary-link" href="#pair-website">Website Build (Pair Website)</a></li>
+									<li><a class="summary-link" href="#about-page">Team Profile (About Page)</a></li>
+									<li><a class="summary-link" href="#next-project">Upcoming Work</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="project-section" aria-labelledby="pair-website-title" id="pair-website">
+				<div class="container">
+					<div class="project-section__header">
+						<h2 id="pair-website-title" class="project-section__title">Website Build (Pair Website)</h2>
+						<p class="project-section__subtitle">
+							A small multi-page website that presents the team and provides a clean, consistent navigation experience.
+						</p>
+						<div class="tags" aria-label="Technologies used">
+							<span class="tag">HTML</span>
+							<span class="tag">CSS</span>
+							<span class="tag">Responsive</span>
+						</div>
+					</div>
+
+					<div class="project-grid">
+						<article class="project-card" aria-label="Pair Website description">
+							<h3 class="project-card__title">Overview</h3>
+							<p class="project-card__text">
+								The goal was to create a readable and modern-looking site with a shared theme, while keeping the HTML semantic and the layout mobile-friendly.
+								We focused on consistency (same header/footer), clarity (short sections), and accessibility (proper headings and navigation labels).
+							</p>
+
+							<h3 class="project-card__title">Key features</h3>
+							<ul class="project-list">
+								<li>Sticky navigation header with clear page links.</li>
+								<li>Consistent theme using CSS variables.</li>
+								<li>Responsive layouts (works on phones and desktops).</li>
+							</ul>
+
+							<div class="card__actions" aria-label="Project links">
+								<a class="action-link" href="../index.html">Open homepage</a>
+								<a class="action-link" href="https://github.com/example/cpe411-pair-website" target="_blank" rel="noreferrer">Repository</a>
+							</div>
+						</article>
+
+						<aside class="project-panel" aria-label="Pair Website details">
+							<h3 class="project-panel__title">Details</h3>
+							<dl class="kv">
+								<dt>Type</dt>
+								<dd>Website</dd>
+								<dt>Pages</dt>
+								<dd>Home, Projects, About</dd>
+								<dt>Team</dt>
+								<dd>Kenneth, John Joseph, Hellene</dd>
+								<dt>Status</dt>
+								<dd>In progress / polishing</dd>
+							</dl>
+							<p class="project-panel__hint">
+								Tip: replace “Repository” links with your actual GitHub URL.
+							</p>
+						</aside>
+					</div>
+				</div>
+			</section>
+
+			<section class="project-section" aria-labelledby="about-page-title" id="about-page">
+				<div class="container">
+					<div class="project-section__header">
+						<h2 id="about-page-title" class="project-section__title">Team Profile (About Page)</h2>
+						<p class="project-section__subtitle">
+							A dedicated page introducing the members, roles, and contact information in a structured layout.
+						</p>
+						<div class="tags" aria-label="Technologies used">
+							<span class="tag">Semantic HTML</span>
+							<span class="tag">Grid Layout</span>
+							<span class="tag">Accessibility</span>
+						</div>
+					</div>
+
+					<div class="project-grid">
+						<article class="project-card" aria-label="About Page description">
+							<h3 class="project-card__title">What’s included</h3>
+							<ul class="project-list">
+								<li>Team member cards with short descriptions.</li>
+								<li>Contact panel for quick email access.</li>
+								<li>Same global navigation to keep the site consistent.</li>
+							</ul>
+
+							<h3 class="project-card__title">Why it matters</h3>
+							<p class="project-card__text">
+								This page makes the website feel complete and credible by clearly identifying the team and providing a clear way to reach you.
+							</p>
+
+							<div class="card__actions" aria-label="Project links">
+								<a class="action-link" href="./about-us.html">Open About</a>
+								<a class="action-link" href="https://github.com/example/cpe411-pair-website/blob/main/README.md" target="_blank" rel="noreferrer">Write-up</a>
+							</div>
+						</article>
+
+						<aside class="project-panel" aria-label="About Page details">
+							<h3 class="project-panel__title">Checklist</h3>
+							<dl class="kv">
+								<dt>Photos</dt>
+								<dd>Optional (initials avatar is fine)</dd>
+								<dt>Emails</dt>
+								<dd>Use real addresses before submission</dd>
+								<dt>Consistency</dt>
+								<dd>Header links match other pages</dd>
+							</dl>
+							<p class="project-panel__hint">Update any placeholder emails to your real ones.</p>
+						</aside>
+					</div>
+				</div>
+			</section>
+
+			<section class="project-section" aria-labelledby="next-project-title" id="next-project">
+				<div class="container">
+					<div class="project-section__header">
+						<h2 id="next-project-title" class="project-section__title">Upcoming Work (Template)</h2>
+						<p class="project-section__subtitle">
+							Use this template to document your next deliverable in the same format.
+						</p>
+						<div class="tags" aria-label="Technologies used">
+							<span class="tag">Tech 1</span>
+							<span class="tag">Tech 2</span>
+							<span class="tag">Tech 3</span>
+						</div>
+					</div>
+
+					<div class="project-grid">
+						<article class="project-card" aria-label="Template description">
+							<h3 class="project-card__title">Suggested write-up</h3>
+							<ul class="project-list">
+								<li><strong>Problem:</strong> What issue does it solve?</li>
+								<li><strong>Solution:</strong> What did you build?</li>
+								<li><strong>Your role:</strong> What did you personally contribute?</li>
+								<li><strong>Tech:</strong> What tools/languages were used?</li>
+							</ul>
+
+							<div class="card__actions" aria-label="Project links">
+								<a class="action-link" href="https://github.com/example/cpe411-upcoming-project" target="_blank" rel="noreferrer">Demo</a>
+								<a class="action-link" href="https://github.com/example/cpe411-upcoming-project" target="_blank" rel="noreferrer">Repository</a>
+							</div>
+						</article>
+
+						<aside class="project-panel" aria-label="Template details">
+							<h3 class="project-panel__title">Details</h3>
+							<dl class="kv">
+								<dt>Status</dt>
+								<dd>Draft</dd>
+								<dt>Owner</dt>
+								<dd>Team / Individual</dd>
+								<dt>Due</dt>
+								<dd>Add date</dd>
+							</dl>
+						</aside>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container">
+				<p class="footer__text">© 2026 • Projects</p>
+			</div>
+		</footer>
+	</body>
+</html>

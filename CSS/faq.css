@@ -1,0 +1,73 @@
+.faq {
+	display: grid;
+	gap: 0.9rem;
+	max-width: 900px;
+}
+
+/* Keep the hero card from stretching too wide on this page. */
+.hero__content {
+	width: 100%;
+	max-width: 720px;
+	margin: 0 auto;
+}
+
+.faq-item {
+	border-radius: 18px;
+	background: linear-gradient(180deg, rgba(17, 26, 46, 0.85), rgba(17, 26, 46, 0.55));
+	border: 1px solid var(--border);
+	overflow: hidden;
+}
+
+.faq-question {
+	list-style: none;
+	cursor: pointer;
+	padding: 1rem 1.25rem;
+	font-weight: 800;
+	color: rgba(232, 238, 252, 0.94);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.faq-question::-webkit-details-marker {
+	display: none;
+}
+
+.faq-item > .faq-question::after {
+	content: "+";
+	flex: 0 0 auto;
+	width: 28px;
+	height: 28px;
+	border-radius: 10px;
+	border: 1px solid rgba(232, 238, 252, 0.18);
+	background: rgba(122, 162, 255, 0.08);
+	display: grid;
+	place-items: center;
+	font-weight: 900;
+	color: rgba(232, 238, 252, 0.85);
+}
+
+.faq-item[open] > .faq-question::after {
+	content: "–";
+}
+
+.faq-answer {
+	padding: 0 1.25rem 1.1rem;
+	color: var(--muted);
+}
+
+.faq-answer p {
+	margin: 0.25rem 0 0;
+}
+
+.faq-item[open] .faq-question {
+	background: rgba(122, 162, 255, 0.08);
+	border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 900px) {
+	.faq {
+		max-width: 100%;
+	}
+}

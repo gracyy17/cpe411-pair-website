@@ -4,70 +4,49 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Homepage</title>
-		<link rel="stylesheet" href="./CSS/homepage.css" />
+		<link rel="stylesheet" href="./CSS/about-us.css" />
 	</head>
 	<body>
 		<header class="site-header">
-			<div class="container header-inner">
-				<div class="brand">
-					<div class="site-title">H2Know Project</div>
-					<div class="site-tagline">Innovate. Iterate. Deliver.</div>
-				</div>
+			<div class="container">
+				<a class="brand" href="./index.html" aria-label="Homepage">
+					<span class="brand__mark" aria-hidden="true">CPE</span>
+					<span class="brand__text">Homepage</span>
+				</a>
+				<nav class="site-nav" aria-label="Primary">
+					<a class="site-nav__link" href="./index.html" aria-current="page">Home</a>
+					<a class="site-nav__link" href="./HTML/project.html">Projects</a>
+					<a class="site-nav__link" href="./HTML/about-us.html">About</a>
+					<a class="site-nav__link" href="./HTML/faq.html">FAQ</a>
+				</nav>
 			</div>
 		</header>
 
 		<main id="top">
 			<section class="hero" aria-labelledby="hero-title">
 				<div class="container hero__grid">
-					<!-- Left: slideshow card -->
-					<div class="slideshow-wrapper">
-						<div class="slideshow-card" aria-live="polite">
-							<div class="slides">
-								<div class="slide active" data-url="HTML/about-us.html">
-									<div class="hero__content">
-										<p class="hero__eyebrow">About us</p>
-										<h1 id="hero-title" class="hero__title">About our team</h1>
-										<p class="hero__subtitle">Learn about the people and purpose behind this project.</p>
-									</div>
-								</div>
-								<div class="slide">
-									<div class="hero__content">
-										<p class="hero__eyebrow">Projects</p>
-										<h1 class="hero__title">Our Projects</h1>
-										<p class="hero__subtitle">A quick look at recent work and demos.</p>
-									</div>
-								</div>
-								<div class="slide">
-									<div class="hero__content">
-										<p class="hero__eyebrow">Contact</p>
-										<h1 class="hero__title">Get in touch</h1>
-										<p class="hero__subtitle">Questions? Reach out via email or visit the Contact page.</p>
-									</div>
-								</div>
-								<div class="slide">
-									<div class="hero__content">
-										<p class="hero__eyebrow">FAQ</p>
-										<h1 class="hero__title">Frequently Asked</h1>
-										<p class="hero__subtitle">Answers to common questions about the project and team.</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="controls">
-								<button class="btn prev" aria-label="Previous">‹</button>
-								<button class="btn next" aria-label="Next">›</button>
-							</div>
-
-							<div class="dots" role="tablist" aria-label="Slide indicators">
-								<button class="dot active" data-index="0" aria-label="Show slide 1"></button>
-								<button class="dot" data-index="1" aria-label="Show slide 2"></button>
-								<button class="dot" data-index="2" aria-label="Show slide 3"></button>
-								<button class="dot" data-index="3" aria-label="Show slide 4"></button>
-							</div>
-						</div>
+					<div class="hero__content">
+						<p class="hero__eyebrow">CPE 411 Pair Website</p>
+						<h1 id="hero-title" class="hero__title">Welcome to our homepage.</h1>
+						<p class="hero__subtitle">
+							Explore our project and meet the team behind it.
+						</p>
 					</div>
 
-					
+					<div class="hero__stats" aria-label="Quick links">
+						<div class="stat">
+							<div class="stat__value">→</div>
+							<div class="stat__label"><a class="contact-link" href="./HTML/about-us.html">Go to About Us</a></div>
+						</div>
+						<div class="stat">
+							<div class="stat__value">CPE</div>
+							<div class="stat__label">Computer Engineering</div>
+						</div>
+						<div class="stat">
+							<div class="stat__value">2026</div>
+							<div class="stat__label">School Project</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -87,6 +66,5 @@
 				<p class="footer__text">© 2026 • Homepage</p>
 			</div>
 		</footer>
-		<script src="./JS/homepage.js"></script>
 	</body>
 </html>
